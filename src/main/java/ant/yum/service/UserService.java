@@ -1,5 +1,5 @@
 package ant.yum.service;
 
-public class Service {
+public class UserService {
 
 }

@@ -1,5 +1,5 @@
 package ant.yum.repository;
 
-public class Repository {
+public class UserRepository {
 
 }

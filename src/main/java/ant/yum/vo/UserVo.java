@@ -1,5 +1,5 @@
 package ant.yum.vo;
 
-public class Vo {
+public class UserVo {
 
 }
