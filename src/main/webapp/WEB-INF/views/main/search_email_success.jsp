@@ -11,19 +11,11 @@
 <title>Kakao API</title>
 </head>
 <body>
-		<h1>아이디 찾기</h1>
-		<form id="join" name="join" method="post" action="${pageContext.request.contextPath }/searchemailsuccess">
-		<tr>
-			<th>이름</th>
-			<td><input type="text" name="uName"></td>
-		</tr>
-		<tr>
-			<th>주민등록번호</th>
-			<td><input type="text" name="uRrn"></td>
-		</tr>
-		<input type="submit" value="아이디 찾기">
+		<h1>아이디 찾기 완료</h1>
+		<label>${name }님의 아이디는 ${email }입니다.</label>
+		
 		<li><a href="${pageContext.request.contextPath }">로그인</a><li>
 		<li><a href="${pageContext.request.contextPath }/searchpassword">비밀번호 찾기</a><li>
-		</form>
+		
 </body>
 </html>

@@ -3,7 +3,7 @@
 <mapper namespace="user">
 	<insert id="insert" parameterType="uservo">
 		<![CDATA[
-	
+			INSERT INTO user VALUES (DEFAULT, #{u_email}, #{u_password}, #{u_name}, #{u_RRN}, #{u_address}, #{u_job}, #{u_auth}, #{u_phone}, #{u_gender})
 		]]>
 	</insert>
 </mapper>

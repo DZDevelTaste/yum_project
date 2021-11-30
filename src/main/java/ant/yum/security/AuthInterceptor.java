@@ -43,12 +43,12 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 		//6. @Auth가 적용이 되어 있기 때문에 인증(Authenfication) 여부 확인
 		HttpSession session = request.getSession();
 		if(session == null) {
-			response.sendRedirect(request.getContextPath() + "/user/login");
+			response.sendRedirect(request.getContextPath() + "/main/login");
 			return false;
 		}
 		UserVo authUser = (UserVo)session.getAttribute("authUser");
 		if(authUser == null) {
-			response.sendRedirect(request.getContextPath() + "/user/login");
+			response.sendRedirect(request.getContextPath() + "/main/login");
 			return false;
 		}
 		
@@ -61,10 +61,10 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 		}
 		
 		//9.@Auth의 role이 "ADMIN" 인 경우, authUser의 role은 "ADMIN" 이어야 한다.
-		if("ADMIN".equals(authUser.getRole()) == false) {
-			response.sendRedirect(request.getContextPath());
-			return false;
-		}
+		// if("ADMIN".equals(authUser.uJob()) == false) {
+		// 	response.sendRedirect(request.getContextPath());
+		//	return false;
+		// }
 		
 		// 옳은 관리자 권한
 		// @Auth의 role: "ADMIN"

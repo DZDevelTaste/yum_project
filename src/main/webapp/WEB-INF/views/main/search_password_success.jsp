@@ -8,23 +8,24 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YUM</title>
+<title>Kakao API</title>
 </head>
 <body>
+		<h1>비밀번호 재설정</h1>
 		<form id="join" name="join" method="post" action="${pageContext.request.contextPath}">
-		<tr>
-			<th>이메일</th>
-			<td><input type="text" name="email"></td>
-		</tr>
+		<label>${name }님 ${email }</label>
 		<tr>
 			<th>비밀번호</th>
-			<td><input type="text" name="password"></td>
+			<td><input type="text" name="uPassword"></td>
 		</tr>
-			<input type="submit" value="로그인">
-			
-			<li><a href="${pageContext.request.contextPath }/join">회원가입</a><li>
-			<li><a href="${pageContext.request.contextPath }/searchemail">아이디 찾기</a><li>
-			<li><a href="${pageContext.request.contextPath }/searchpassword">비밀번호 찾기</a><li>
+		<tr>
+			<th>비밀번호 확인</th>
+			<td><input type="text" name="re_password"></td>
+		</tr>
+		<tr>
+		<input type="submit" value="로그인">
+		<li><a href="${pageContext.request.contextPath }">로그인</a><li>
+		<li><a href="${pageContext.request.contextPath }/searchpassword">비밀번호 찾기</a><li>
 		</form>
 </body>
 </html>
