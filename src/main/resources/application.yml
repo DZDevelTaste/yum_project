@@ -42,7 +42,7 @@ spring:
       auto: true
       proxy-target-class: true
 ---
-# production profile - spring boot configuration
+# production profile - spring boot configuration    
 
 spring:
    config:
