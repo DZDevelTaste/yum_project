@@ -68,9 +68,9 @@ spring:
    # datasource
    datasource: 
       driver-class-name: org.mariadb.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/webdb?characterEncoding=utf8
-      username: webdb
-      password: webdb
+      url: jdbc:postgresql://34.64.204.254:5432/yum
+      username: yum
+      password: ant-yum
       initialSize: 10
       maxActive: 20
 ---
