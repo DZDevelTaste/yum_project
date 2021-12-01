@@ -1,5 +1,7 @@
 package ant.yum.service;
 
+import java.util.Map;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +21,23 @@ public class UserService {
 	}
 
 	public void join(@Valid UserVo vo) {
+		String address = vo.getAddress() + vo.getAddressDetail();
+		String rrn = vo.getRrn() + vo.getRrn1();
+		String email = vo.getEmail() + vo.getEmail1();
+		String phone = vo.getPhone() + vo.getPhone1() + vo.getPhone2();
+		vo.setEmail(email);
+		vo.setRrn(rrn);
+		vo.setAddress(address);
+		vo.setPhone(phone);
+		System.out.println(address);
 		userRepository.insert(vo);
 	}
+
+	public UserVo findId(String name, String rrn) {
+		return userRepository.findId(name,rrn);
+		
+	}
+
+	
 
 }

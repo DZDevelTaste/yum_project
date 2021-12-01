@@ -12,7 +12,7 @@
 </head>
 <body>
 		<h1>아이디 찾기 완료</h1>
-		<label>${name }님의 아이디는 ${email }입니다.</label>
+		<label>${userVo.name }님의 아이디는 ${userVo.email }입니다.</label>
 		
 		<li><a href="${pageContext.request.contextPath }">로그인</a><li>
 		<li><a href="${pageContext.request.contextPath }/searchpassword">비밀번호 찾기</a><li>

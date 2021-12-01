@@ -14,7 +14,7 @@
 		<form id="join" name="join" method="post" action="${pageContext.request.contextPath}">
 		<tr>
 			<th>이메일</th>
-			<td><input type="text" name="email"></td>
+			<td><input type="text" name="email" onchange="ee()"></td>
 		</tr>
 		<tr>
 			<th>비밀번호</th>

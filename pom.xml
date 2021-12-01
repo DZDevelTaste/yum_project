@@ -25,6 +25,11 @@
 	</dependencyManagement>
 	
 	<dependencies>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
 		<!-- Spring Boot devtools: live reload -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

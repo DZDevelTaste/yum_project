@@ -51,8 +51,8 @@ spring:
 
    # datasource
    datasource: 
-      driver-class-name: org.mariadb.jdbc.Driver
-      url: jdbc:mysql://227.8.9.1:3306/webdb?characterEncoding=utf8
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://34.64.204.254:5432/yum?characterEncoding=utf8
       username: webdb
       password: webdb?!@#yammi123
       initialSize: 100
@@ -67,8 +67,8 @@ spring:
 
    # datasource
    datasource: 
-      driver-class-name: org.mariadb.jdbc.Driver
-      url: jdbc:postgresql://34.64.204.254:5432/yum
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://34.64.204.254:5432/yum?characterEncoding=utf8
       username: yum
       password: ant-yum
       initialSize: 10
