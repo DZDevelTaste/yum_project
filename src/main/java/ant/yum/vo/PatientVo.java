@@ -2,16 +2,16 @@ package ant.yum.vo;
 
 public class PatientVo {
 
-	private int pNo;
-	private String pName;
-	private String pGender;
-	private String pRRN;
-	private String pInsuarance;
-	private String pPhone;
-	private String pAddress;
-	private double pLength;
-	private double pWeight;
-	private String pDesc;
+	private int No;
+	private String Name;
+	private String Gender;
+	private String RRN;
+	private String Insuarance;
+	private String Phone;
+	private String Address;
+	private double Length;
+	private double Weight;
+	private String Desc;
 	
 	
 }

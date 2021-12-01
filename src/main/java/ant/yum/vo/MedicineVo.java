@@ -2,13 +2,13 @@ package ant.yum.vo;
 
 public class MedicineVo {
 
-	private int mNo;
-	private String mCode;
-	private String mName;
-	private String mCompany;
-	private String mIngredient;
-	private String mEfficacy;
-	private String mPrecaution;
-	private String mCaution;
-	private String mSideEffect;
+	private int No;
+	private String Code;
+	private String Name;
+	private String Company;
+	private String Ingredient;
+	private String Efficacy;
+	private String Precaution;
+	private String Caution;
+	private String SideEffect;
 }

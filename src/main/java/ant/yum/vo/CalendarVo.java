@@ -1,6 +1,6 @@
 package ant.yum.vo;
 
 public class CalendarVo {
-	private int caNo;
-	private String caDay;
+	private int No;
+	private String Day;
 }

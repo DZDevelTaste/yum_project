@@ -2,8 +2,8 @@ package ant.yum.vo;
 
 public class PresMedicineVo {
 
-	private int dNo;
-	private int mNo;
-	private int pDay;
-	private int pCount; 
+	private int diagnosisNo;
+	private int medicineNo;
+	private int presmedicineDay;
+	private int presmedicineCount; 
 }

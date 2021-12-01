@@ -2,9 +2,9 @@ package ant.yum.vo;
 
 public class DiagnosisVo {
 
-	private int dNo;
-	private String dDate;
-	private String dDesc;
-	private int oNo;
-	private int uNo;
+	private int noo;
+	private String date;
+	private String desc;
+	private int orderNo;
+	private int userNo;
 }

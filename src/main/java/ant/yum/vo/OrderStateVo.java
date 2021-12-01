@@ -2,6 +2,6 @@ package ant.yum.vo;
 
 public class OrderStateVo {
 
-	private int osNo;
-	private String osState;
+	private int No;
+	private String State;
 }

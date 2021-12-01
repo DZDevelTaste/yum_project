@@ -2,11 +2,11 @@ package ant.yum.vo;
 
 public class OrderVo {
 
-	private int oNo;
-	private String oDate;
-	private int oExpenses;
-	private String oDesc;
-	private int uNo;
-	private int osNo;
-	private int pNo;
+	private int No;
+	private String Date;
+	private int Expenses;
+	private String Desc;
+	private int userNo;
+	private int orderstateNo;
+	private int patientNo;
 }
