@@ -12,6 +12,19 @@
 <script src="${pageContext.request.contextPath }/assets/js/jquery/jquery-1.9.0.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
+//이메일 뒷자리 선택
+function email_check(){
+	var email1 = document.getElementById('id1').value;
+	var email2 = document.getElementById('id2').value;
+	console.log(email2);
+	if(email2 == 1) {
+		document.getElementById('id1').disabled = false;
+		document.getElementById('id1').value='';
+	} else {
+		document.getElementById('id1').disabled = true;
+		document.getElementById('id1').value=email2;
+	}
+};
 // 주민등록 번호 정규식 
 function rrn_check() {
 	var rrn = document.getElementById('rrn').value;
@@ -40,7 +53,7 @@ function rrn_check() {
 		<form id="join" name="join" method="post" action="${pageContext.request.contextPath }/searchemailsuccess">
 		<tr>
 			<th>이름</th>
-			<td><input type="text" name="name" id="name"></td>
+			<td><input type="text" name="name" id="name" /></td>
 		</tr>
 		<tr>
 			<th>주민등록번호</th>

@@ -1,8 +1,11 @@
 package ant.yum.controller;
 
-import java.util.Map;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import ant.yum.service.UserService;
+import ant.yum.service.MainService;
 import ant.yum.vo.UserVo;
 
 @Controller
@@ -22,7 +25,7 @@ public class MainController {
 	ServletContext servletContext;
 	
 	@Autowired
-	private UserService userService;
+	private MainService mainService;
 	
 	@RequestMapping("")
 	public String index() {
@@ -35,7 +38,8 @@ public class MainController {
 	}
 	@RequestMapping(value="/join", method=RequestMethod.POST)
 	public String join(@Valid UserVo vo) {
-		userService.join(vo);
+		mainService.join(vo);
+		
 		return "redirect:/";
 	}
 	@RequestMapping("/searchemail")
@@ -43,23 +47,52 @@ public class MainController {
 		return "main/search_email";
 	}
 	@RequestMapping(value="/searchemailsuccess", method=RequestMethod.POST)
-	public String search_email_(UserVo vo, @PathVariable("name") String name, 
-			@PathVariable("rrn") String rrn1, @PathVariable("rrn1") String rrn2, Model model) {
-		String rrn = rrn1 + rrn2;
+	public String search_email_(HttpServletRequest hsr, HttpServletResponse hsR , Model model) throws IOException{
+		String name = hsr.getParameter("name");
+		String rrn1 = hsr.getParameter("rrn");
+		String rrn2 = hsr.getParameter("rrn1");
+		String rrn = rrn1 +"-"+ rrn2;
 		
-		UserVo userVo = userService.findId(name, rrn);
+		UserVo vo = mainService.findId(name, rrn);
 		
-		model.addAttribute("userVo", userVo);
+	
+		model.addAttribute("vo", vo);
 		
+		if(vo == null) {
+			return "main/search_email";
+		}
 		return "main/search_email_success";
 	}
 	@RequestMapping("/searchpassword")
 	public String search_password() {
 		return "main/search_password";
 	}
-	@RequestMapping("/searchpasswordsuccess")
-	public String search_password_success() {
+	@RequestMapping(value="/searchpassword" , method=RequestMethod.POST)
+	public String search_password_su(HttpServletRequest hsr, Model model) {
+		String name = hsr.getParameter("name");
+		String email1 = hsr.getParameter("email");
+		String email2 = hsr.getParameter("email1");
+		String rrn1 = hsr.getParameter("rrn");
+		String rrn2 = hsr.getParameter("rrn1");
+		String rrn = rrn1 +"-"+ rrn2;
+		String email = email1 + "@" + email2;
+		
+		UserVo vo = mainService.findIdByEmail(name, email, rrn);
+		model.addAttribute("vo", vo);
+		
+		if(vo == null) {
+			return "main/search_password";
+		}
 		
 		return "main/search_password_success";
 	}
+	@RequestMapping(value="/searchpasswordsuccess/{name}", method=RequestMethod.POST)
+	public String search_password_success(HttpServletRequest hsr, Model model, @PathVariable("name") String name) {
+		String password = hsr.getParameter("password");
+		
+		mainService.updatePw(password, name);
+		
+		return "redirect:/";
+	}
+
 }

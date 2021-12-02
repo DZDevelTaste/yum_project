@@ -11,6 +11,7 @@
 <title>YUM</title>
 </head>
 <body>
+	<div>
 		<form id="join" name="join" method="post" action="${pageContext.request.contextPath}">
 		<tr>
 			<th>이메일</th>
@@ -26,5 +27,6 @@
 			<li><a href="${pageContext.request.contextPath }/searchemail">아이디 찾기</a><li>
 			<li><a href="${pageContext.request.contextPath }/searchpassword">비밀번호 찾기</a><li>
 		</form>
+	</div>
 </body>
 </html>

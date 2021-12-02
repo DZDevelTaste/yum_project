@@ -138,6 +138,7 @@ window.onload = function(){
 	  			document.getElementById("zonecode_kakao").value = data.zonecode; // 우편번호 넣기
                 document.getElementById("address_kakao").value = data.address; // 주소 넣기
                 document.querySelector("input[name=address_detail]").focus(); // 상세입력 포커싱
+               
 		}
         }).open();
     });
@@ -153,7 +154,7 @@ window.onload = function(){
             <tr>
                 <td>@</td>
 	            <input type="text" id="id1" name="email1" class="ui_input" onfucus="" />
-				<td><select id="id2" name="email2" title="이메일 주소 선택" class="ui_select" onchange="email_check()">
+				<td><select id="id2" name="email1" title="이메일 주소 선택" class="ui_select" onchange="email_check()">
 						<option value="1">직접입력</option>
 						<option value="naver.com">naver.com</option>
 						<option value="nate.com">nate.com</option>
@@ -192,7 +193,7 @@ window.onload = function(){
 			<label>의사</label> <input type="radio" name="job" id="job" value='D'></td>
 		<tr>
 			<th>전화번호</th>
-			<td><input type="text" name="phone1" id="phone1" value="010"disabled></td>
+			<td><input type="text" name="phone" id="phone1" value="010" disabled></td>
 			<select id="phone" name="phone" title="" class="ui_select" onchange="phone_check()">
 						<option value="010">010</option>
 						<option value="011">011</option>
@@ -208,11 +209,11 @@ window.onload = function(){
 		</tr>
 		<tr>
 			<th>-</th>
-			<td><input type="text" max="9999" maxlength="4" name="phone2" id="phone2" onkeyup="onlynumberic(event)"></td>
+			<td><input type="text" max="9999" maxlength="4" name="phone1" id="phone2" onkeyup="onlynumberic(event)"></td>
 		</tr>
 		<tr>
 			<th>-</th>
-			<td><input type="text" max="9999" maxlength="4" name="phone2" id="phone2" onkeyup="onlynumberic(event)"></td>
+			<td><input type="text" max="9999" maxlength="4" name="phone2" id="phone3" onkeyup="onlynumberic(event)"></td>
 		</tr>
 		<br>
 		<tr>
