@@ -18,7 +18,6 @@ public class MainRepository {
 	private SqlSession sqlSession;
 	
 	public boolean insert(@Valid UserVo vo) {
-		System.out.println(vo);
 		int count = sqlSession.insert("main.insert", vo);
 		return count == 1;
 	}

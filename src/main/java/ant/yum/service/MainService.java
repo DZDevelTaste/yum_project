@@ -14,11 +14,6 @@ import ant.yum.vo.UserVo;
 public class MainService {
 	@Autowired
 	private MainRepository mainRepository;
-	
-	public UserVo getUser(String email, String password) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public void join(@Valid UserVo vo) {
 		String address = vo.getAddress() + vo.getAddressDetail();
@@ -29,7 +24,6 @@ public class MainService {
 		vo.setRrn(rrn);
 		vo.setAddress(address);
 		vo.setPhone(phone);
-		System.out.println(address);
 		mainRepository.insert(vo);
 	}
 
