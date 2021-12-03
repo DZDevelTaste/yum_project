@@ -30,8 +30,11 @@ spring:
       always-message-format: true
       basename: messages/messages_ko
       encoding: UTF-8
+      
    # multipart
    servlet: 
+      charset: UTF-8
+      enabled: true
       multipart: 
          enabled: true
          max-file-size: 50MB
@@ -51,7 +54,7 @@ spring:
 
    # datasource
    datasource: 
-      driver-class-name: org.mariadb.jdbc.Driver
+      driver-class-name: org.postgresql.Driver
       url: jdbc:mysql://34.64.204.254:3306/yum
       username: yum
       password: ant-yum?!@#yammi123
@@ -67,7 +70,7 @@ spring:
 
    # datasource
    datasource: 
-      driver-class-name: org.mariadb.jdbc.Driver
+      driver-class-name: org.postgresql.Driver
       url: jdbc:postgresql://34.64.204.254:5432/yum?characterEncoding=utf8
       username: yum
       password: ant-yum

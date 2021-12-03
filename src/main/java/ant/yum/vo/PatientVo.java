@@ -1,5 +1,8 @@
 package ant.yum.vo;
 
+import lombok.Data;
+
+@Data
 public class PatientVo {
 
 	private int No;

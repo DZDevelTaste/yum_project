@@ -1,8 +1,11 @@
 package ant.yum.vo;
 
+import lombok.Data;
+
+@Data
 public class DiagnosisVo {
 
-	private int noo;
+	private int no;
 	private String date;
 	private String desc;
 	private int orderNo;
